@@ -1,0 +1,17 @@
+services:
+  l3-ct-sarcopenia-prediction:
+    image: ghcr.io/docurdt/l3-ct-sarcopenia-prediction:latest
+    container_name: l3-ct-sarcopenia-prediction
+    ports:
+      - "${HOST_PORT:-7860}:7860"
+    environment:
+      L3_APP_ROOT: /app
+      L3_GRADIO_HOST: 0.0.0.0
+      L3_GRADIO_PORT: 7860
+      L3_MODEL_DIR: single_top5
+      L3_ODIASP_PYTHON: /usr/local/bin/python
+      L3_ODIASP_SRC: /app/odiasp_runtime/SRC
+      L3_OUTPUT_DIR: /app/outputs
+    volumes:
+      - ./outputs:/app/outputs
+    restart: unless-stopped
