@@ -6,6 +6,8 @@ The application localizes an L3 axial CT slice, runs a five-model TorchScript en
 
 > Research use only. This repository is not a regulatory-approved medical device and must not be used for clinical diagnosis, treatment decisions, or patient management without independent validation and applicable regulatory review.
 
+> Model release note: this Docker image uses five selected fold-best TorchScript models, named `model 1` through `model 5` in the web interface. It does not run the earlier full set of 25 candidate models.
+
 ![Prediction summary example](docs/assets/prediction_summary_example.png)
 
 ![L3 review panel example](docs/assets/l3_review_panel_example.png)
@@ -28,7 +30,7 @@ Included in the Docker image:
 
 - Gradio web interface
 - Inference pipeline code
-- Five selected TorchScript model files
+- Five selected fold-best TorchScript model files
 - L3 localization runtimes
 
 Included in this GitHub repository:
@@ -95,7 +97,7 @@ http://127.0.0.1:7860
 4. Click `Load CT cases`.
 5. Select one or more CT cases.
 6. Choose the L3 localization backend.
-7. Keep all five models selected for the standard ensemble prediction.
+7. Keep all five fold-best models selected for the standard ensemble prediction.
 8. Click `Run Sarcopenia prediction`.
 9. Review the tabbed outputs and download the result files.
 
