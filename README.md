@@ -210,7 +210,7 @@ figures/
 
 Example ensemble figure:
 
-![Ensemble probabilities example](docs/assets/ensemble_probabilities_example.png)
+![Five-model ensemble probabilities example](docs/assets/ensemble_probabilities_5models_example.png)
 
 ## Output File Explanation
 
