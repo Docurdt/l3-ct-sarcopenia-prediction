@@ -24,6 +24,27 @@ Sarcopenia is commonly assessed from body-composition measurements around the th
 
 The goal is to make the trained model easier to evaluate in a reproducible environment: users can start the Docker container, open a browser page, upload a CT DICOM folder and a clinical spreadsheet, then download prediction results.
 
+## Associated Publication
+
+This repository accompanies our work on segmentation-free multimodal AI for opportunistic sarcopenia detection from routine abdominal CT.
+
+The proposed framework automatically localizes the L3 vertebral level and integrates CT imaging with routinely available clinical variables to identify guideline-defined sarcopenia without muscle segmentation. The model was developed and externally validated across multiple gastrointestinal cancer cohorts. This Dockerized implementation is intended to support reproducible research evaluation and future automated deployment workflows after appropriate local validation, governance, and regulatory review.
+
+## Citation & Acknowledgements
+
+If you use this repository in your research, please cite the associated publication. Complete citation details, including the DOI, will be added after publication.
+
+The framework is designed with a modular L3 vertebral localization component. By default, this repository includes an L3 vertebral localization model. Researchers may alternatively replace this module with other publicly available L3 localization methods according to their own research needs, provided that the correct axial CT slice corresponding to the L3 vertebral level is identified.
+
+The current framework supports the following L3 vertebral localization models:
+
+- ODIASP  
+  Charriere K, Ragusa A, Genoux B, et al. ODIASP: An Open User-Friendly Software for Automated SMI Determination-Application to an Inpatient Population. *Journal of Cachexia, Sarcopenia and Muscle*. 2025;16(4):e70023.
+- Lightweight-2D-Full-Information-Sagittal-Vertebra-Locator  
+  <https://github.com/Drzhangwt/Lightweight-2D-Full-Information-Sagittal-Vertebra-Locator>
+
+We gratefully acknowledge the authors of these open-source projects for their valuable contributions to the research community. Please cite the corresponding publications or repositories when using these localization models in your work.
+
 ## What Is Included
 
 Included in the Docker image:
